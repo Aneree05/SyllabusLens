@@ -1,0 +1,51 @@
+# COURSE LECTURE NOTES: NATURAL LANGUAGE PROCESSING (CS801)
+Instructor: Department of Computer Science & Engineering
+Academic Year: 2025-2026
+
+## Unit 1: Foundations of Natural Language Processing and Text Normalization
+Natural Language Processing begins with raw unstructured text that must be converted into structured linguistic representations. Text normalization involves several foundational steps:
+1. Sentence Segmentation and Word Tokenization: Splitting contiguous character streams into discrete lexical tokens. Boundary detection regexes identify words while handling punctuation and contractions.
+2. Case Folding and Unicode Normalization: Lowercasing characters and standardizing Unicode representations (NFKD/NFC) to ensure consistency across distinct encodings.
+3. Stop Word Removal: Filtering high-frequency functional words such as articles and prepositions that offer minimal topical discrimination.
+4. Stemming and Morphological Analysis: Stemming strips derivational and inflectional affixes using rule-based heuristics such as the Porter Stemmer. For example, "running", "runs", and "ran" are reduced to their stem. In contrast, Lemmatization relies on complete morphological vocabularies and part-of-speech context to return dictionary lemmas (e.g., "better" -> "good").
+5. N-Gram Language Models: Sequences of n consecutive tokens (unigrams, bigrams, trigrams) used to preserve localized word ordering and compound terminology.
+
+## Unit 2: Vector Space Models, Bag of Words, and TF-IDF Retrieval
+To enable computational comparison and information retrieval, text documents are projected into multidimensional vector spaces:
+1. Bag of Words (BoW) Representation: Disregards grammatical structure and word order, recording solely token frequency counts across a fixed vocabulary. Limitations include extreme matrix sparsity, high dimensionality, and failure to model semantic synonymy.
+2. Term Frequency-Inverse Document Frequency (TF-IDF): Weighs terms based on both localized importance and corpus-wide rarity.
+   - Term Frequency (TF): Proportional to word occurrences within a given document.
+   - Inverse Document Frequency (IDF): Logarithmically dampens ubiquitous terms that appear across almost all documents: IDF(t) = ln((1 + |D|) / (1 + |{d in D : t in d}|)) + 1.
+   - TF-IDF = TF * IDF. High values represent distinctive, informative domain keywords.
+3. Cosine Similarity in Vector Space: Measures the cosine of the angle between two multi-dimensional feature vectors:
+   Sim(q, d) = (q . d) / (||q|| * ||d||).
+   Cosine similarity normalizes for document length variations, ensuring that a longer document does not artificially outscore a concise document simply due to higher raw word frequencies.
+
+## Unit 3: Linguistic Sequence Labeling, POS Tagging, and Named Entity Recognition
+Natural language processing requires annotating syntactic roles and identifying domain entities:
+1. Part-of-Speech (POS) Tagging: Assigns grammatical categories (e.g., NN for noun, VB for verb, JJ for adjective) to each token using the Penn Treebank tagset. Approaches include rule-based heuristic taggers that exploit morphological suffixes (e.g., -ing, -ed, -ly), Hidden Markov Models (HMM) computing transition and emission probabilities, and Maximum Entropy Markov Models (MEMM).
+2. Named Entity Recognition (NER): Identifies and classifies proper entities into predefined categories such as Person, Organization, Location, Geopolitical Entity, and Date. Sequence labeling schemes like BIO (Begin, Inside, Outside) are utilized. Rule-based gazetteers and statistical models extract critical knowledge facts from unstructured text.
+
+## Unit 4: Distributed Word Representations and Continuous Word Embeddings
+Traditional one-hot and frequency representations suffer from the curse of dimensionality and cannot compute semantic similarity between distinct words (e.g., "cat" and "kitten"):
+1. Distributed Representations: Words are represented as dense, low-dimensional continuous vectors in R^d (typically 100 to 300 dimensions) where geometrically proximal vectors correspond to semantically related words.
+2. Word2Vec Architectures:
+   - Continuous Bag-of-Words (CBOW): Predicts target words given surrounding context windows.
+   - Continuous Skip-Gram: Predicts surrounding context words given the target word; handles infrequent terms effectively.
+3. GloVe (Global Vectors for Word Representation): Combines local context window methods with global matrix factorization of word-word co-occurrence statistics.
+4. Word Analogies and Semantic Vector Arithmetic: Allows capturing linear regularities, famously demonstrated by: vector("King") - vector("Man") + vector("Woman") ≈ vector("Queen").
+
+## Unit 5: Neural Architectures for NLP, RNNs, LSTMs, and Transformers
+Sequential and contextual processing requires expressive neural network models:
+1. Recurrent Neural Networks (RNN): Processes token sequences recurrently by updating internal hidden state vectors: h_t = tanh(W_h * h_{t-1} + W_x * x_t + b).
+2. The Vanishing and Exploding Gradient Problem: During Backpropagation Through Time (BPTT), repeated matrix multiplications over long token distances cause gradients to exponentially decay toward zero or explode, preventing standard RNNs from learning long-term dependencies.
+3. Long Short-Term Memory (LSTM) and Gated Recurrent Units (GRU): LSTMs introduce constant error carousels and memory cells controlled by input, forget, and output gates that selectively retain or erase historical information.
+4. Attention Mechanism: Overcomes information bottlenecks in fixed-size encoder vectors by computing dynamic attention weights over all encoder hidden states for each decoding step.
+5. Transformer Architecture and Multi-Head Self-Attention: Eliminates recurrence entirely in favor of parallelized scaled dot-product attention computed over Query (Q), Key (K), and Value (V) projections:
+   Attention(Q, K, V) = softmax((Q * K^T) / sqrt(d_k)) * V.
+   Multi-head attention allows the model to simultaneously attend to information from different representation subspaces at different positions.
+
+## Unit 6: Information Retrieval and Academic Syllabus Coverage Metrics
+When evaluating academic syllabus alignment:
+1. Retrieval Metrics: Precision@k measures proportion of retrieved top-k sections that are relevant. Recall@k measures proportion of all relevant syllabus topics retrieved in top-k. Mean Reciprocal Rank (MRR) evaluates how quickly the first relevant section appears.
+2. Syllabus Coverage Analysis: Identifies whether examination questions adequately sample core course competencies or cluster disproportionately within specific chapters while omitting others entirely.

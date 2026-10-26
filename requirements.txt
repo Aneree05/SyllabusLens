@@ -1,0 +1,11 @@
+# SyllabusLens runtime dependencies.
+# Verified: installed into a clean virtualenv on Linux x86_64 / Python 3.12.3 and the full
+# test suite run there (see README "Verification"). NOT yet verified on Windows.
+streamlit>=1.50,<2
+scikit-learn>=1.5,<2
+scipy>=1.14,<2
+numpy>=1.26,<3
+pandas>=2.2,<4
+plotly>=5.24,<8
+pypdf>=5.0,<6
+python-pptx>=1.0,<2

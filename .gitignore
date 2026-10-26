@@ -1,0 +1,51 @@
+# Virtual Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# IDE & Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Temporary output & logs
+*.log
+scratch/
+.pytest_cache/
+
+# SyllabusLens runtime data (user documents, SQLite DB) - never commit
+data/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+uploads/
+tmp_uploads/
+
+# Secrets / local configuration
+.env
+.env.*
+!.env.example
+secrets.toml
+.streamlit/secrets.toml
+
+# Test / build artefacts
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/

@@ -1,0 +1,31 @@
+# DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING
+## B.TECH VIII SEMESTER END-TERM EXAMINATION: NATURAL LANGUAGE PROCESSING
+Time: 3 Hours | Maximum Marks: 70
+
+---
+
+### PART A (Answer All Questions - 5 Marks Each)
+
+1. (a) Define the Bag of Words (BoW) model. State its primary advantages and fundamental limitations in capturing word order and semantic context. [5 Marks]
+
+(b) Explain Term Frequency-Inverse Document Frequency (TF-IDF). Formulate the mathematical equation for IDF and explain why it downweights ubiquitous words across documents. [5 Marks]
+
+2. (a) What is Cosine Similarity? Explain why cosine distance is invariant to document length compared to standard Euclidean distance in vector space retrieval. [5 Marks]
+
+(b) Differentiate between Stemming and Lemmatization. Illustrate with examples how the Porter Stemmer differs from dictionary-based morphological analysis. [5 Marks]
+
+---
+
+### PART B (Answer Any Four Questions - 10 Marks Each)
+
+3. Explain the architecture and forward computation of Recurrent Neural Networks (RNN). Detail the vanishing gradient problem encountered during Backpropagation Through Time (BPTT) and explain how Long Short-Term Memory (LSTM) gating mechanisms mitigate this problem. [10 Marks]
+
+4. (a) What is Named Entity Recognition (NER)? Describe common entity types such as Person, Organization, Location, and explain rule-based vs statistical NER approaches. [5 Marks]
+
+(b) Explain Part-of-Speech (POS) tagging. Discuss the role of Penn Treebank tagsets and morphological suffix heuristics in sequence labeling. [5 Marks]
+
+5. Discuss Word Embeddings and distributed semantic representations. Compare Word2Vec continuous bag of words (CBOW) and skip-gram architectures with GloVe matrix factorization. [10 Marks]
+
+6. Explain the Self-Attention mechanism in Transformer architectures. How does multi-head scaled dot-product attention compute contextual query, key, and value vectors? [10 Marks]
+
+7. Explain quantum computing algorithms such as Shor's algorithm for polynomial-time integer factorization and Grover's amplitude amplification search algorithm in quantum cryptography. [10 Marks]

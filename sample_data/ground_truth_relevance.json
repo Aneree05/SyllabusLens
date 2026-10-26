@@ -1,0 +1,23 @@
+{
+  "description": "Relevance judgments for the bundled DEMO dataset (sample_question_paper.txt vs sample_lecture_notes_nlp.txt). Sections are referenced by heading fragment, not by internal ID, so the file stays valid when ID schemes change. Judgments were assigned by reading which unit of the notes covers each question's topic (v1 of this file referenced obsolete IDs and was off by one section).",
+  "dataset_version": "2.0",
+  "is_demo_data": true,
+  "notes_document": "sample_lecture_notes_nlp.txt",
+  "paper_document": "sample_question_paper.txt",
+  "judgments": {
+    "Q1.a": ["Unit 2:"],
+    "Q1.b": ["Unit 2:"],
+    "Q2.a": ["Unit 2:"],
+    "Q2.b": ["Unit 1:"],
+    "Q3":   ["Unit 5:"],
+    "Q4.a": ["Unit 3:"],
+    "Q4.b": ["Unit 3:"],
+    "Q5":   ["Unit 4:"],
+    "Q6":   ["Unit 5:"],
+    "Q7":   []
+  },
+  "binary_coverage": {
+    "Q1.a": true, "Q1.b": true, "Q2.a": true, "Q2.b": true, "Q3": true,
+    "Q4.a": true, "Q4.b": true, "Q5": true, "Q6": true, "Q7": false
+  }
+}

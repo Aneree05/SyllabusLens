@@ -1,0 +1,4 @@
+-r requirements.txt
+pytest>=8
+# Only used by tests that generate a text-layer PDF; those tests skip if it is absent.
+reportlab>=4

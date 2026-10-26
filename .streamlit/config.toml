@@ -1,0 +1,19 @@
+# Light theme only. Native widgets inherit these; custom components use components/theme.py tokens.
+[theme]
+base = "light"
+primaryColor = "#4338CA"
+backgroundColor = "#F6F5F2"
+secondaryBackgroundColor = "#EEEDF7"
+textColor = "#14183A"
+font = "sans serif"
+
+[server]
+# Keep in step with SYLLABUSLENS_MAX_UPLOAD_MB (default 25) in config.py.
+maxUploadSize = 25
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
